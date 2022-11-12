@@ -68,6 +68,9 @@ nnoremap("<leader>lc", ":lclose<CR>")
 nnoremap("<C-n>", ":lnext<CR>")
 nnoremap("<C-p>", ":lprev<CR>")
 
+-- Lazygit
+nnoremap ("<leader>gg", ":LazyGit<CR>")
+
 -- Quickfix list
 nnoremap("<leader>co", ":copen<CR>")
 nnoremap("<leader>cc", ":cclose<CR>")

@@ -183,6 +183,31 @@ return require('packer').startup(function(use)
   use 'mtscout6/syntastic-local-eslint.vim'
   use 'prettier/vim-prettier'
 
+  --Emmet
+  use { 'mattn/emmet-vim',
+    config = function()
+      local path = vim.fn.stdpath('config')..'/lua/plugins/emmet.vim'
+      vim.cmd('source '..path)
+    end
+}
+
+
+  -- Ale
+  use { 'dense-analysis/ale',
+    config = function()
+      local path = vim.fn.stdpath('config')..'/lua/plugins/ale.vim'
+      vim.cmd('source '..path)
+    end
+}
+
+ -- Lazygit
+ use {'kdheepak/lazygit.nvim',
+    config = function()
+      local path = vim.fn.stdpath('config')..'/lua/plugins/lazygit.vim'
+      vim.cmd('source '..path)
+    end
+ }
+
   if packer_bootstrap then
     require('packer').sync()
   end
